@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Sidenav from './ui/sidenav'
 
 import { ttNormsPro } from './fonts/fonts'
 import './globals.css'
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ttNormsPro.className}>{children}</body>
+      <body className={`${ttNormsPro.className} antialiased bg-primary`}>
+        <div className='flex'>
+          <Sidenav />
+          <div>{children}</div>
+        </div>
+      </body>
     </html>
   )
 }
