@@ -42,11 +42,35 @@ export const novelties: Product[] = [
     score: '7,0',
     image: '/images/card-4.jpg'
   },
+  {
+    id: 5,
+    title: 'Синий жук',
+    score: '10',
+    image: '/images/card-1.jpg'
+  },
+  {
+    id: 6,
+    title: 'Домашняя игра',
+    score: '6,9',
+    image: '/images/card-2.jpg'
+  },
+  {
+    id: 7,
+    title: 'Салют 7',
+    score: '5,8',
+    image: '/images/card-3.jpg'
+  },
+  {
+    id: 8,
+    title: 'Поймай меня, если сможешь',
+    score: '7,0',
+    image: '/images/card-4.jpg'
+  },
 ]
 
 export const topTen: Product[] = [
   {
-    id: 4,
+    id: 9,
     title: 'Уэнсдэй',
     subtitle: 'Уэнсдэй предстоит освоить экстрасенсорные cпособности, чтобы остановить местного серийного убийцу и раскрыть тайну родителей.',
     releaseDate: '2022 - ...',
@@ -59,13 +83,13 @@ export const topTen: Product[] = [
     image: '/images/top-card-1.jpg'
   },
   {
-    id: 5,
+    id: 10,
     title: 'Поймай меня, если сможешь',
     score: null,
     image: '/images/top-card-2.jpg'
   },
   {
-    id: 6,
+    id: 11,
     title: 'Поймай меня, если сможешь',
     score: '7,0',
     image: '/images/top-card-3.jpg'
