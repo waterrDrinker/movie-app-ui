@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'gradient-violet-blue': `linear-gradient(to right, ${theme.colors.violet}, ${theme.colors.blue})`
+        'gradient-violet-blue': `linear-gradient(to right, ${theme.colors.violet}, ${theme.colors.blue})`,
+        'hero': "url('/images/hero-image.jpg')"
       }),
       colors: {
-        primary: '#09090C',
+        background: '#09090C',
         blue: '#2575FC',
         violet: '#6A11CB'
       }

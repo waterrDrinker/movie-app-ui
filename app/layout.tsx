@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ttNormsPro.className} antialiased bg-primary`}>
+      <body className={`${ttNormsPro.className} antialiased bg-background`}>
         <div className='flex'>
           <Sidenav />
-          <div>{children}</div>
+          <div className='w-full'>{children}</div>
         </div>
       </body>
     </html>
