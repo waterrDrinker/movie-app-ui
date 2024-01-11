@@ -3,7 +3,7 @@ import Link from "next/link";
 // #!
 const Sidenav = () => {
   return (
-    <nav className="flex items-center flex-col px-[55px] pt-[40px] h-screen">
+    <nav className="flex items-center flex-col px-[55px] pt-[40px] h-screen shrink-0">
       <div id="logo" className="pl-[9px] mb-[110px]">
         <Link href="/" className="transition delay-150 hover:brightness-150">
           <Image src="/icons/Logo.svg" alt="logo" height={50} width={32} />

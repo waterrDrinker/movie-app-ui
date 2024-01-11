@@ -1,7 +1,11 @@
 import { Archivo } from "next/font/google";
 import localFont from "next/font/local";
 
-export const archivo = Archivo({ subsets: ["latin"] });
+export const archivo = Archivo({
+   weight: '900',
+   subsets: ["latin"],
+   style: 'italic' 
+  });
 export const ttNormsPro = localFont({
   src: [
     {

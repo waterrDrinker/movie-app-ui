@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Sidenav from './ui/sidenav'
 
 import { ttNormsPro } from './fonts/fonts'
-import './globals.css'
+import './globals.scss'
 
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ttNormsPro.className} antialiased bg-background`}>
+      <body className={`${ttNormsPro.className} antialiased bg-background overflow-x-hidden`}>
         <div className='flex'>
           <Sidenav />
           <div className='w-full'>{children}</div>
