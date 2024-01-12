@@ -16,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
       <body className={`${ttNormsPro.className} antialiased bg-background overflow-x-hidden`}>
         <div className='flex'>
           <Sidenav />
-          <div className='w-full pl-[5.1rem]'>{children}</div>
+          <div className='w-full pl-[21.5rem]'>{children}</div>
         </div>
       </body>
     </html>

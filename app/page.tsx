@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Page() {
   
   return (
-    <main className="w-full">
+    <main id="top" className="w-full">
       <section
         id="hero"
         className="h-[800px] w-full flex flex-col justify-end items-center relative mb-[9.5rem]"
@@ -46,7 +46,7 @@ export default function Page() {
               <Link href="#!">
                 <div className="relative mb-[2rem]">
                   <Image
-                    className="rounded-[2rem]"
+                    className="rounded-[2rem] min-h-[59.7rem]"
                     src={typeof product.images === 'string' ? product.images : product.images.poster}
                     alt={product.title}
                     width={398}

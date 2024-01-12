@@ -20,7 +20,7 @@ const Page = ({ params }: { params: { id: string } }) => {
   return (
     <>
       {product ? (
-        <main className="w-full">
+        <main id="top" className="w-full">
           <h1 hidden>{product.title}</h1> {/* for SEO */}
           <section id="hero" className="w-full relative mb-[11.2rem]">
             <div className="absolute right-0 top-0 -z-10">
@@ -134,7 +134,7 @@ const Page = ({ params }: { params: { id: string } }) => {
             <h3 className="font-bold text-[4rem] mb-[2.4rem]">Описание</h3>
             <p className="font-normal text-[3rem] mb-[2.4rem]">{product.desc}</p>
             {product?.isContentSensetive && (
-              <div className="flex">
+              <div className="flex items-start space-x-[2rem]">
                 <div className="w-[6.762rem] flex justify-start items-start pt-[0.2rem]">
                   <Image
                     src="/icons/attention-icon.svg"
@@ -163,7 +163,7 @@ const Page = ({ params }: { params: { id: string } }) => {
                     <Link href="#!">
                       <div className="relative mb-[2rem]">
                         <Image
-                          className="rounded-[2rem]"
+                          className="rounded-[2rem] min-h-[59.7rem]"
                           src={
                             typeof prod.images === "string"
                               ? prod.images

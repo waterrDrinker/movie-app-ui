@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-// #!
+
 const Sidenav = () => {
   return (
-    <nav className="flex items-center flex-col px-[55px] pt-[40px] h-screen shrink-0">
+    <nav className="flex items-center flex-col px-[55px] pt-[40px] h-screen shrink-0 fixed z-50">
       <div id="logo" className="pl-[9px] mb-[110px]">
         <Link href="/" className="transition delay-150 hover:brightness-150">
           <Image src="/icons/Logo.svg" alt="logo" height={50} width={32} />
@@ -42,7 +42,7 @@ const Sidenav = () => {
         </Link>
       </div>
       <div id="up" className="">
-        <Link href='#!' className="transition hover:brightness-125">
+        <Link href='#top' className="transition hover:brightness-125">
           <div className="p-2.5">
             <Image
               src='/icons/up-icon.svg'
