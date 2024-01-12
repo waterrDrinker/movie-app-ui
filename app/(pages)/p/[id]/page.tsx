@@ -224,7 +224,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
 export default Page;
 
-export function getProductData(id: string) {
+function getProductData(id: string) {
   const product = products.find((product) => product.id === id);
   if (product) {
     return product;
