@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${ttNormsPro.className} antialiased bg-background overflow-x-hidden`}>
         <div className='flex'>
           <Sidenav />
-          <div className='w-full'>{children}</div>
+          <div className='w-full pl-[5.1rem]'>{children}</div>
         </div>
       </body>
     </html>

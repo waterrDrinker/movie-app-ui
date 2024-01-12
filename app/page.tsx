@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { homeHero, novelties, topTen } from "./lib/data";
+import { homeHero, products, topTen } from "./lib/data";
 import { archivo } from "./fonts/fonts";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
+  
   return (
-    <main className="pl-[5.1rem] w-full">
+    <main className="w-full">
       <section
         id="hero"
         className="h-[800px] w-full flex flex-col justify-end items-center relative mb-[9.5rem]"
@@ -20,13 +21,13 @@ export default function Home() {
           <div className="text-[3rem] space-x-[2rem] flex justify-center">
             <Link
               href="#!"
-              className="px-[53px] h-[80px] flex items-center rounded-2xl gradient-bg"
+              className="px-[53px] h-[80px] flex items-center rounded-2xl bg-gradient"
             >
               Смотреть
             </Link>
             <Link
               href="#!"
-              className="px-[53px] h-[80px] flex items-center rounded-2xl transparent-bg"
+              className="px-[53px] h-[80px] flex items-center rounded-2xl bg-transparent"
             >
               О фильме
             </Link>
@@ -37,25 +38,25 @@ export default function Home() {
       <section id="novelties" className="mb-[11rem]">
         <h3 className="text-[4rem] font-bold mb-[2.4rem]">Новинки</h3>
         <ul className="flex space-x-[4.4rem] overflow-hidden whitespace-nowrap">
-          {novelties.map((novelty) => (
+          {products.map((product) => (
             <li
-              key={novelty.id}
+              key={product.id}
               className="cursor-pointer shrink-0 grow-0 basis-auto"
             >
               <Link href="#!">
                 <div className="relative mb-[2rem]">
                   <Image
                     className="rounded-[2rem]"
-                    src={novelty.image}
-                    alt={novelty.title}
+                    src={typeof product.images === 'string' ? product.images : product.images.poster}
+                    alt={product.title}
                     width={398}
                     height={597}
                   />
-                  <div className="absolute gradient-bg left-7 top-7 w-[7.5rem] h-[4.8rem] rounded-xl flex justify-center items-center">
-                    {novelty.score}
+                  <div className="absolute bg-gradient left-7 top-7 w-[7.5rem] h-[4.8rem] rounded-xl flex justify-center items-center">
+                    {product.score}
                   </div>
                 </div>
-                {novelty.title}
+                {product.title}
               </Link>
             </li>
           ))}
@@ -75,12 +76,12 @@ export default function Home() {
               key={top.id}
               className="cursor-pointer shrink-0 grow-0 basis-auto"
             >
-              <Link href="#!">
+              <Link href={top.id === "9" ? `/p/${top.id}` : '#!'}>
                 <div className="mb-[2rem]">
                   <div className="w-[39.8rem] h-[59.7rem] relative">
                     <Image
                       className="rounded-[2rem]"
-                      src={top.image}
+                      src={typeof top.images === 'string' ? top.images : top.images.poster}
                       alt={top.title}
                       width={398}
                       height={597}
