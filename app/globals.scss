@@ -2,6 +2,8 @@
   --bg-color: #09090c;
   --gray-color: #BABABA;
   --darker-gray-color: #4B4B4B;
+  --blue: #2575FC;
+  --violet: #6A11CB;
 }
 
 @tailwind base;
@@ -20,6 +22,12 @@ body {
 // gradient-bg
 .bg-gradient {
   background-image: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    
+  }
 }
 // transparent-bg
 .bg-transparent { 
@@ -39,4 +47,14 @@ body {
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
   color: var(--bg-color);
+}
+
+.hero-shadow::after {
+  box-shadow: inset 25px -30px 50px var(--bg-color), inset 30px -25px 50px var(--bg-color);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
 }

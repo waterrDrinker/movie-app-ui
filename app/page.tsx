@@ -11,7 +11,16 @@ export default function Page() {
         id="hero"
         className="h-[800px] w-full flex flex-col justify-end items-center relative mb-[9.5rem]"
       >
-        <div className="w-[1250px] h-[800px] absolute top-0 right-0 bg-hero bg-no-repeat -z-20" />
+        <div className="absolute right-0 top-0 -z-10 hero-shadow">
+                  <Image
+                    className=""
+                    src="/images/hero-image.jpg"
+                    alt="hero"
+                    width={1250}
+                    height={800}
+                    quality={100}
+                  />
+            </div>
         <div className="pr-[200px]">
           <div className="w-[886px] mb-[36px]">
             <h2 className="text-[4rem] font-medium text-center">
@@ -79,13 +88,15 @@ export default function Page() {
               <Link href={top.id === "9" ? `/p/${top.id}` : '#!'}>
                 <div className="mb-[2rem]">
                   <div className="w-[39.8rem] h-[59.7rem] relative">
-                    <Image
-                      className="rounded-[2rem]"
-                      src={typeof top.images === 'string' ? top.images : top.images.poster}
-                      alt={top.title}
-                      width={398}
-                      height={597}
-                    />
+                    <div className="rounded-[2.8rem]">
+                      <Image
+                        className="rounded-[2rem] p-[0.4rem]"
+                        src={typeof top.images === 'string' ? top.images : top.images.poster}
+                        alt={top.title}
+                        width={398}
+                        height={597}
+                      />
+                    </div>
                     <div
                       className={`${archivo.className} absolute -z-10 -left-[16.1rem] top-[2.5rem] text-[36rem] font-black italic`}
                     >

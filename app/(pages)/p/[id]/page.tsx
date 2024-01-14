@@ -23,7 +23,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         <main id="top" className="w-full">
           <h1 hidden>{product.title}</h1> {/* for SEO */}
           <section id="hero" className="w-full relative mb-[11.2rem]">
-            <div className="absolute right-0 top-0 -z-10">
+            <div className="absolute right-0 top-0 -z-10 hero-shadow">
               {product?.images &&
                 typeof product.images === "object" &&
                 product.images?.hero && (
@@ -187,7 +187,7 @@ const Page = ({ params }: { params: { id: string } }) => {
           </section>
           <section id="information" className="mb-[12.6rem]">
             <h5 className="font-bold text-[4rem] mb-[2.4rem]">Информация</h5>
-            <div className="grid grid-cols-3 font-normal text-[2.8rem]">
+            <div className="grid grid-cols-3 font-normal text-[2.8rem] gap-y-[2.5rem]">
               <div>
                 <h6 className="text-[var(--darker-gray-color)]">Премьера в мире</h6>
                 <p>{product.worldPremier}</p>
